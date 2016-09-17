@@ -75,6 +75,12 @@ bool isRectangleCover(int** rectangles, int rectanglesRowSize,
             i += 1;
         }
     }
+
+    for (int i = 0; i < pointCnt; ++i) {
+        free(points[i]);
+    }
+    free(points);
+
     return leftPoint == 4;
 }
 
